@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Server Profile</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background: linear-gradient(to right, #ff9a9e, #fecfef);
+            margin: 0;
+        }
+
+        .profile-container {
+            background: rgba(255, 255, 255, 0.9);
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            transition: transform 0.3s;
+        }
+
+        .profile-container:hover {
+            transform: scale(1.05);
+        }
+
+        h2 {
+            color: #333;
+            margin-bottom: 20px;
+            font-size: 2em;
+        }
+
+        .user-info {
+            margin-bottom: 30px;
+        }
+
+        p {
+            color: #555;
+            font-size: 1.2em;
+            margin: 10px 0;
+        }
+
+        .server-status {
+            margin-top: 20px;
+        }
+
+        .status-badge {
+            display: inline-block;
+            padding: 10px 20px;
+            border-radius: 20px;
+            font-weight: bold;
+            text-transform: uppercase;
+            cursor: pointer;
+            transition: background 0.3s, color 0.3s;
+        }
+
+        .online {
+            background: #4caf50;
+            color: #fff;
+        }
+
+        
+    </style>
+</head>
+
+<body>
+    <div class="profile-container">
+        <h2>Home Server Profile</h2>
+        <div class="user-info">
+            <p><strong>Username:</strong> Divyansh Chauhan</p>
+            <p><strong>Email:</strong> Divyansh20060@gmail.com</p>
+        </div>
+
+        <div class="server-status">
+            <p><strong>Server Status:</strong> <span class="status-badge online" onclick="toggleStatus(this)">Online</span></p>
+        </div>
+    </div>
+
+    
+</body>
+
+</html>

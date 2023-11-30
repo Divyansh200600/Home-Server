@@ -1,0 +1,154 @@
+<!-- templates/index.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>File Upload and Download</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <style>
+        body {
+            background-color: #121212;
+            color: #b3b3b3;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container {
+            background-color: #1f1f1f;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
+            animation: fadeInUp 1s;
+            width: 400px;
+        }
+
+        h2 {
+            color: #b3b3b3;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .btn-primary {
+            background-color: #ff9900;
+            border-color: #ff9900;
+            width: 100%;
+            padding: 10px;
+            font-size: 18px;
+            transition: background-color 0.3s ease-in-out;
+            text-shadow: 0 0 10px rgba(255, 153, 0, 0.8);
+        }
+
+        .btn-primary:hover {
+            background-color: #e68a00;
+        }
+
+        .list-group-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 15px;
+            background-color: #2b2b2b;
+            border: 1px solid #2b2b2b;
+            border-radius: 5px;
+            padding: 15px;
+            animation: fadeInLeft 1s;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .btn-success, .btn-danger {
+            padding: 10px;
+            font-size: 14px;
+            margin: 0;
+            width: 80px;
+            transition: background-color 0.3s ease-in-out;
+        }
+
+        .btn-success {
+            background-color: #00cc00;
+            border-color: #00cc00;
+        }
+
+        .btn-danger {
+            background-color: #ff3333;
+            border-color: #ff3333;
+        }
+
+        .btn-success:hover {
+            background-color: #00b300;
+        }
+
+        .btn-danger:hover {
+            background-color: #e60000;
+        }
+
+        p {
+            color: #b3b3b3;
+            text-align: center;
+            margin-top: 20px;
+            font-size: 14px;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeInLeft {
+            from {
+                opacity: 0;
+                transform: translateX(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h2 class="mb-4">File Upload and Download</h2>
+
+        <!-- Upload Form -->
+        <form action="/upload" method="post" enctype="multipart/form-data">
+            <div class="form-group">
+                <input type="file" name="file" class="form-control-file">
+            </div>
+            <button type="submit" class="btn btn-primary">Upload</button>
+        </form>
+
+        <!-- Uploaded Files -->
+        
+        <ul class="list-group">
+            
+                <li class="list-group-item">
+                    230031100036 (1) (1).pdf
+                    <a href="/download/230031100036 (1) (1).pdf" class="btn btn-success btn-sm">Download</a> 
+                    <a href="/delete/230031100036 (1) (1).pdf" class="btn btn-danger btn-sm">Delete</a>
+                    
+                </li>
+            
+        </ul>
+        
+    </div>
+
+</body>
+</html>
